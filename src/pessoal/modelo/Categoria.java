@@ -12,7 +12,7 @@ public class Categoria {
 		return nome;
 	}
 
-	public void setNome(Strin Nome) {
+	public void setNome(String Nome) {
 		this.nome = nome;
 	
 	}
