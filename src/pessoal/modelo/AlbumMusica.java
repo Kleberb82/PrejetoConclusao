@@ -29,7 +29,7 @@ public class AlbumMusica extends Item {
 	
 	@Override
 	public String getTipo() {
-		return "Album de Musica"
+		return "Album de Musica";
 	}
 	
 	@Override

@@ -20,7 +20,7 @@ public class Revista extends Item {
 	}
 	
 	public String getDatePublicacao() {
-		retun dataPublicacao;
+		return datePublicacao;
 	}
 		
 	public void setDataPublicacao (String datePublicacao) {

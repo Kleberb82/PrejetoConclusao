@@ -1,21 +1,23 @@
 package pessoal.repositorio;
 
 import pessoal.modelo.Item;
-import java.util.ArryList;
+
+
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.collectors;
+import java.util.stream.Collectors;
 
-
-public class IntemRepositoryImpl implements ItemReporsitory{
-	private List<Item> itens;
+public class IntemRepositoryImpl implements ItemRepository{
 	
-	public ItemRepositoryImpl() {
-		this.itens = new ArrayLst<>();
+private List<Item> itens;
+	
+	public IntemRepositoryImpl() {
+		this.itens = new ArrayList<>();
 		}
 	
 	@Override
 	public void adicionarItem(Item item) {
-		this.item.add(item);
+		this.itens.add(item);
 	}
 	
 	@Override
@@ -24,9 +26,13 @@ public class IntemRepositoryImpl implements ItemReporsitory{
 	}
 	
 	@Override
-	public boolean removerItem(String titulo) {
-		return this.itens.removeif(item ->
-		item.getTitulo()egualsIgnoreCase (titulo));
+	public List<Item> listarItensPorCategoria(String categoria){
+		return this.itens.stream().filter(item -> item.getCategoria().getNome().equalsIgnoreCase(categoria)).collect(Collectors.toList());
 	}
-
+	
+	@Override
+	public boolean removerItem(String titulo) {
+		return this.itens.removeIf(item -> item.getTitulo().equalsIgnoreCase (titulo));
+	}
+	
 }
