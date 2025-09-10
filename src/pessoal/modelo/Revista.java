@@ -6,7 +6,7 @@ public class Revista extends Item {
 	
 	public Revista (String titulo, String autorArtista, Categoria categoria, int 
 			numeroEdicao, String datePublicacao) {
-		super (titulo, autoArtista, categoria);
+		super (titulo, autorArtista, categoria);
 		this.numeroEdicao = numeroEdicao;
 		this.datePublicacao = datePublicacao;
 		}
@@ -20,9 +20,9 @@ public class Revista extends Item {
 	}
 	
 	public String getDatePublicacao() {
-		retun datePublicacao;
+		retun dataPublicacao;
 	}
-	
+		
 	public void setDataPublicacao (String datePublicacao) {
 		this.datePublicacao = datePublicacao;
 	}
